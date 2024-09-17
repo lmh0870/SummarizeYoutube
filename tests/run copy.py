@@ -1,19 +1,12 @@
-import os
-import json
-from datetime import datetime
-import sqlite3
-import logging
-from googleapiclient.discovery import build
-from google.oauth2.credentials import Credentials
-from google.auth.exceptions import RefreshError
+from src.lib.logging_config import logger
 
 # 상수 정의
 TOKEN_FILE = "token.json"
 DB_FILE = "liked_videos.db"
 
 # 로깅 설정
-logging.basicConfig(level=logging.INFO)
-logger = logging.getLogger(__name__)
+# logging.basicConfig(level=logging.INFO)
+# logger = logging.getLogger(__name__)
 
 
 # token.json 파일에서 인증 정보 로드
